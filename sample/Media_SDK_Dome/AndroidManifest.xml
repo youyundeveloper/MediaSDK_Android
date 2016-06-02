@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.media_sdk_dome"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <!-- Access to the network connection -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Allow programs written to external storage, such as write files on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Gets the current state of WiFi access and WLAN hotspot of information -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- State of network information, such as the current network connection is valid -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Change the state of WiFi -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- Mount, the mount of external file system -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- Read the underlying logging system -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- Modify sound Settings information -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- Allow the vibrations -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Window display system -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Mike recorded voice through the phone, or headset -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Allows the application to shut down the phone's screen background process is still running -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Allows programs to monitor, modify or give up on phone -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- Allows programs to enter the phone number from the non-system dialer -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Allows programs to boot automatically -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Allow application access to the contact address book information -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Needed to use our own Contact editor -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- Allow a program after receiving the broadcast quickly received a radio -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- Needed to allow Linphone to install on tablets, since android.permission.CALL_PHONE implies android.hardware.telephony is required -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.media_sdk_dome.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.media_sdk_dome.UserListActivity" >
+        </activity>
+        <activity android:name="com.example.media_sdk_dome.InCallActivity" >
+        </activity>
+        <activity android:name="com.example.media_sdk_dome.IncomingCallActivity" >
+        </activity>
+
+        <service android:name="com.weimi.media.WMediaService" />
+
+        <receiver android:name="matrix.sdk.util.NetworkReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

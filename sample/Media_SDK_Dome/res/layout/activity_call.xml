@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title" >
+
+        <Button
+            android:id="@+id/btn_gag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="麦已打开"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扬声器已关闭"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_sound" >
+
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="刷新" />
+
+        <Button
+            android:id="@+id/btn_hangup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="挂断" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/ll_btn" >
+    </ListView>
+
+</RelativeLayout>

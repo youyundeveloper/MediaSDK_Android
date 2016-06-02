@@ -1,0 +1,8 @@
+/gen
+/bin
+/build
+/.settings
+project.properties
+.classpath
+.project
+.DS_Store
