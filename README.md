@@ -29,9 +29,9 @@
 commons-fileupload-1.2.1.jar
 commons-httpclient-3.1.jar
 commons-lang-2.6.jar
-protobuf-java-2.4.1.jar
-weimi-sdk-android-1.0.0.jar
-media-sdk-android-0.2.1.jar
+youyun-protobuf-java-2.4.1.jar
+youyun-wchat-android-1.0.1.jar
+youyun-media-android-0.2.2.jar
 
 armeabi
 	liblinphonearmv5noneon.so
@@ -65,6 +65,7 @@ x86
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 <uses-permission android:name="android.permission.READ_CONTACTS" />
 <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+<uses-permission android:name="android.permission.BLUETOOTH" />
 <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 <uses-feature
     android:name="android.hardware.telephony"
@@ -74,10 +75,15 @@ x86
 
 ```
 <service android:name="com.weimi.media.WMediaService" />
+<service android:name="com.ioyouyun.wchat.countly.OpenUDID_service" >
+        <intent-filter>
+            <action android:name="org.OpenUDID.GETUDID" />
+        </intent-filter>
+</service>
 ```
 ### 4、在您项目的AndroidManifest.xml文件中加入以下广播
 ```
-<receiver android:name="matrix.sdk.util.NetworkReceiver" >
+<receiver android:name="com.ioyouyun.wchat.util.NetworkReceiver" >
     <intent-filter android:priority="2147483647" >
          <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
     </intent-filter>
