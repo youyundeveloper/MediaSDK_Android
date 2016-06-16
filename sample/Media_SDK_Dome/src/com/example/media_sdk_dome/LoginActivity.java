@@ -3,9 +3,6 @@ package com.example.media_sdk_dome;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
-import matrix.sdk.WeimiInstance;
-import matrix.sdk.data.AuthResultData;
-import matrix.sdk.message.WChatException;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -16,6 +13,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.ioyouyun.wchat.WeimiInstance;
+import com.ioyouyun.wchat.data.AuthResultData;
+import com.ioyouyun.wchat.message.WChatException;
 import com.weimi.media.WMedia;
 
 public class LoginActivity extends Activity implements OnClickListener {

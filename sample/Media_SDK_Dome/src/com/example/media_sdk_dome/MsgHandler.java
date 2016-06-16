@@ -1,12 +1,13 @@
 package com.example.media_sdk_dome;
 
-import matrix.sdk.message.NoticeType;
-import matrix.sdk.message.NotifyCenter;
-import matrix.sdk.message.WChatException;
-import matrix.sdk.message.WeimiNotice;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
+import com.ioyouyun.wchat.message.NoticeType;
+import com.ioyouyun.wchat.message.NotifyCenter;
+import com.ioyouyun.wchat.message.WChatException;
+import com.ioyouyun.wchat.message.WeimiNotice;
 
 /**
  * 必须接收NotifyCenter.clientNotifyChannel的消息

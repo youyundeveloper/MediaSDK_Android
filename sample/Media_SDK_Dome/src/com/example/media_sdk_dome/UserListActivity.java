@@ -3,9 +3,6 @@ package com.example.media_sdk_dome;
 import java.util.ArrayList;
 import java.util.List;
 
-import matrix.sdk.WeimiInstance;
-import matrix.sdk.message.CmdType;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,6 +21,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.ioyouyun.wchat.WeimiInstance;
+import com.ioyouyun.wchat.message.CmdType;
 import com.weimi.media.WMedia;
 
 public class UserListActivity extends Activity implements OnClickListener{
