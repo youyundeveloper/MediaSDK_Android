@@ -11,9 +11,9 @@
 您可以到 [游云官方网站](http://www.17youyun.com) 下载游云 Media_SDK。下载包中分为如下两部分：
 
 - Media Lib - 游云 Media库和相关库
-- Media Dome
+- Media Demo
 
- Dome简单集成了电话会议功能，供您参考。
+ Demo简单集成了电话会议功能，供您参考。
  
 ### 3、创建应用
 
